@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -11,7 +12,9 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.maza.lab01.ui.theme.Lab01Theme
 
@@ -34,9 +37,16 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Column(modifier = modifier) {
-        Text(text = "¡Hola soy $name!", fontSize = 24.sp)
-        Text(text = "Curso: Programación en Móviles")
+    Column(
+        modifier = modifier
+            .padding(16.dp)
+            .border(width = 2.dp, color = Color.Blue)
+            .padding(16.dp)
+    ) {
+        Text(text = "¡Hola soy $name!",
+            fontSize = 32.sp)
+        Text(text = "Curso: Programación en Móviles",
+            fontSize = 20.sp)
     }
 }
 
