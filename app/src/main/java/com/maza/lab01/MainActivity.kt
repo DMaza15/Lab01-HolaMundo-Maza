@@ -8,6 +8,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -47,6 +48,11 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             fontSize = 32.sp)
         Text(text = "Curso: Programación en Móviles",
             fontSize = 20.sp)
+        Button(
+            onClick = {}, modifier = modifier.padding(top = 16.dp)
+        ) {
+            Text(text = "Presióname")
+        }
     }
 }
 
