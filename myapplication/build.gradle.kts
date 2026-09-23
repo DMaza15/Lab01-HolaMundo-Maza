@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.maza.lab01"
+    namespace = "com.maza.myapplication"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.maza.lab01"
+        applicationId = "com.maza.myapplication"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
@@ -36,8 +36,6 @@ android {
 }
 
 dependencies {
-    // Librería para realizar navegación entre pantallas
-    implementation("androidx.navigation:navigation-compose:2.8.9")
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
